@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "fixed2_fully_opaque.png",
       "idiom" : "tv",
       "scale" : "1x"
     },

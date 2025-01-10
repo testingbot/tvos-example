@@ -1,0 +1,49 @@
+name: Build tvOS App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build tvOS App
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set Up Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app
+
+      - name: Install Dependencies
+        run: |
+          brew install cocoapods
+          pod install
+
+      - name: Build tvOS App
+        run: |
+          xcodebuild clean \
+            -workspace tvos-example.xcodeproj/project.xcworkspace \
+            -scheme tvos-example \
+            -sdk appletvsimulator \
+            -configuration Release \
+            -derivedDataPath build
+
+      - name: Export IPA
+        run: |
+          mkdir -p build/ipa
+          xcodebuild \
+            -exportArchive \
+            -archivePath build/Build/Products/Release-appletvsimulator/tvos-example.xcarchive \
+            -exportPath build/ipa \
+            -exportOptionsPlist ExportOptions.plist
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: tvos-example-ipa
+          path: build/ipa/tvos-example.ipa
+
