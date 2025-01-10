@@ -18,15 +18,10 @@ jobs:
       - name: Set Up Xcode
         run: sudo xcode-select -switch /Applications/Xcode.app
 
-      - name: Install Dependencies
-        run: |
-          brew install cocoapods
-          pod install
-
       - name: Build tvOS App
         run: |
           xcodebuild clean \
-            -workspace tvos-example.xcodeproj/project.xcworkspace \
+            -project tvos-example.xcodeproj \
             -scheme tvos-example \
             -sdk appletvsimulator \
             -configuration Release \
