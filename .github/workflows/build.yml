@@ -24,15 +24,24 @@ jobs:
             -project tvos-example.xcodeproj \
             -scheme tvos-example \
             -sdk appletvsimulator \
-            -configuration Release \
+            -configuration Debug \
             -derivedDataPath build
+
+      - name: Archive tvOS App
+        run: |
+          xcodebuild archive \
+            -project tvos-example.xcodeproj \
+            -scheme tvos-example \
+            -sdk appletvsimulator \
+            -configuration Debug \
+            -archivePath build/tvos-example.xcarchive
 
       - name: Export IPA
         run: |
           mkdir -p build/ipa
           xcodebuild \
             -exportArchive \
-            -archivePath build/Build/Products/Release-appletvsimulator/tvos-example.xcarchive \
+            -archivePath build/tvos-example.xcarchive \
             -exportPath build/ipa \
             -exportOptionsPlist ExportOptions.plist
 
@@ -41,4 +50,3 @@ jobs:
         with:
           name: tvos-example-ipa
           path: build/ipa/tvos-example.ipa
-
