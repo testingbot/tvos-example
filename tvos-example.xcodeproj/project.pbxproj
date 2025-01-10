@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
@@ -30,21 +30,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		199D2DAB2D31235B00E231C1 /* tvos-example */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "tvos-example";
-			sourceTree = "<group>";
-		};
-		199D2DBC2D31235D00E231C1 /* tvos-exampleTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "tvos-exampleTests";
-			sourceTree = "<group>";
-		};
-		199D2DC62D31235D00E231C1 /* tvos-exampleUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "tvos-exampleUITests";
-			sourceTree = "<group>";
-		};
+		199D2DAB2D31235B00E231C1 /* tvos-example */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "tvos-example"; sourceTree = "<group>"; };
+		199D2DBC2D31235D00E231C1 /* tvos-exampleTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "tvos-exampleTests"; sourceTree = "<group>"; };
+		199D2DC62D31235D00E231C1 /* tvos-exampleUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "tvos-exampleUITests"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +175,7 @@
 				};
 			};
 			buildConfigurationList = 199D2DA42D31235B00E231C1 /* Build configuration list for PBXProject "tvos-example" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -195,7 +184,6 @@
 			);
 			mainGroup = 199D2DA02D31235B00E231C1;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 199D2DAA2D31235B00E231C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
