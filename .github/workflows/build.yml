@@ -15,8 +15,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set Up Xcode
-        run: sudo xcode-select -switch /Applications/Xcode.app
+      - name: Select Xcode 16.2
+        run: sudo xcode-select -switch /Applications/Xcode_16.2.app
 
       - name: Build tvOS App
         run: |
