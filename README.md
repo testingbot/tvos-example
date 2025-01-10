@@ -1,6 +1,6 @@
 # tvOS Example App
 
-This is a simple tvOS example app designed for use with [TestingBot's SmartTV Appium Testing](https://testingbot.com/). The app includes interactive elements such as thumbnails, input fields and navigation to demonstrate Appium's ability to interact with tvOS applications.
+This is a simple tvOS example app designed for use with [TestingBot's SmartTV Testing](https://testingbot.com/features/smart-tv-testing). The app includes interactive elements such as thumbnails, input fields and navigation to demonstrate Appium's ability to interact with tvOS applications.
 TestingBot provides SmartTV Testing in the Cloud, on physical Apple TV devices.
 
 ## Features
